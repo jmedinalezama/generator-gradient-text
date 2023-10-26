@@ -1,7 +1,8 @@
 :root {
-  --azul: #1dd5ff;
+  --azul: #d4e5e7;
   --crema: #ffcb98;
   --black: rgb(51 51 51);
+  --light: #f0f0eb;
 }
 html {
   box-sizing: border-box;
@@ -70,14 +71,17 @@ main {
   flex-direction: column;
   min-height: max-content;
   background-color: var(--black);
+  border-radius: 0.5rem;
+  box-shadow: -2px 0 0.5rem 0.2rem rgba(0, 0, 0, 0.185);
 }
 
 .datos {
-  background-color: var(--crema);
+  background-color: var(--light);
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   padding: 1rem;
+  border-radius: 0.5rem 0.5rem 0 0;
 }
 
 @media screen and (min-width: 700px) {
@@ -102,6 +106,8 @@ main {
   outline: none;
   border-radius: 0.2rem;
   font-size: 1.1rem;
+  display: block;
+  padding: 0.3rem;
 }
 
 .datos .mensaje {
@@ -111,6 +117,7 @@ main {
 
 .datos .datos-grados input {
   width: 100%;
+  padding: 0.2rem;
 }
 
 .datos .datos-grados .info-grados {
@@ -152,11 +159,13 @@ main {
 .view {
   display: flex;
   flex-direction: column;
+  border-radius: 0.5rem;
 }
 
 .view .texto-gradiente {
-  background-color: var(--crema);
+  background-color: var(--black);
   padding: 0.5rem;
+  border-radius: 0.5rem;
 }
 
 .view .texto-gradiente div {
@@ -175,6 +184,7 @@ main {
 .view .code {
   background-color: var(--black);
   padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
 }
 
 .view .code .code-css {
@@ -208,4 +218,18 @@ main {
 .view .code .code-css code .properties .value {
   color: chartreuse;
   font-weight: 400;
+}
+
+@media screen and (min-width: 700px) {
+  .view {
+    flex-direction: row;
+  }
+
+  .view .texto-gradiente {
+    width: 50%;
+  }
+
+  .view .code {
+    width: 50%;
+  }
 }

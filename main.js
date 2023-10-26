@@ -9,6 +9,7 @@ const $template = d.querySelector(".template-color").content;
 
 let cantidadBtnColors = 2;
 let mensajeLimitTexto = true;
+let longitudCadena = 120;
 
 const agregarColor = () => {
   cantidadBtnColors++;
@@ -56,7 +57,7 @@ const establecerTexto = (e) => {
 
   let mensaje = null;
 
-  if (valor.length > 50) {
+  if (valor.length > longitudCadena) {
     mensaje = d.createElement("div");
 
     mensaje.textContent = "No se permiten más caracteres.";
@@ -74,7 +75,7 @@ const establecerTexto = (e) => {
 
     let limittexto = "";
 
-    for (let i = 0; i < 50; i++) {
+    for (let i = 0; i < longitudCadena; i++) {
       limittexto += valor[i];
     }
 
