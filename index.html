@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Generator Gradient Color</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+  <main>
+    <div class="title">
+      <h1>Generador de gradiente de texto</h1>
+    </div>
+    <section class="container">
+      <article class="datos">
+        <section>
+          <div class="datos-texto">
+            <label for="texto">
+              <h3>Introduce un texto:</h3>
+            </label>
+            <input type="search" name="texto" id="texto" placeholder="Introduce un texto" autocomplete="off" />
+          </div>
+          <div class="datos-grados">
+            <label for="grados">
+              <h3>Elige el grado del gradiente:</h3>
+            </label>
+            <input type="range" name="grados" id="grados" min="0" max="360" value="180" />
+            <span class="info-grados">Grados: 180</span>
+          </div>
+        </section>
+        <div class="datos-colors">
+          <h3>Elige los colores del gradiente</h3>
+          <a href="#" class="add-color">Añadir color</a>
+          <div class="colors"></div>
+
+        </div>
+      </article>
+      <section class="view">
+        <aside class="texto-gradiente">
+          <div>
+            <h2 class="active">Texto Ejemplo</h2>
+          </div>
+        </aside>
+        <aside class="code">
+          <div class="code-css">
+            <code>
+              <span style="color: #000"
+                >Aquí se mostrará el código del gradiente.</span
+              >
+            </code>
+          </div>
+        </aside>
+      </section>
+    </section>
+  </main>
+
+  <template class="template-color">
+    <div class="color">
+      <div>
+        <span>Color: </span>
+        <input type="color" />
+      </div>
+      <button>❌</button>
+    </div>
+  </template>
+
+  <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,211 @@
+:root {
+  --azul: #1dd5ff;
+  --crema: #ffcb98;
+  --black: rgb(51 51 51);
+}
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--azul);
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+/* ----------------- */
+main {
+  background-color: var(--azul);
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title h1 {
+  text-align: center;
+  padding: 0.5rem;
+  width: 100%;
+
+  background-image: linear-gradient(
+    90deg,
+    rgb(255, 145, 0) 30%,
+    rgb(38, 0, 255) 50%,
+    rgb(255, 0, 0) 75%
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: max-content;
+  background-color: var(--black);
+}
+
+.datos {
+  background-color: var(--crema);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+@media screen and (min-width: 700px) {
+  .datos {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  .datos section {
+    width: 100%;
+  }
+}
+
+.datos .datos-texto {
+  margin: 0.5rem 0;
+}
+
+.datos .datos-texto input {
+  width: 100%;
+  height: 2rem;
+  border: none;
+  outline: none;
+  border-radius: 0.2rem;
+  font-size: 1.1rem;
+}
+
+.datos .mensaje {
+  background-color: red;
+  color: white;
+}
+
+.datos .datos-grados input {
+  width: 100%;
+}
+
+.datos .datos-grados .info-grados {
+  display: block;
+  text-align: center;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.datos .datos-colors {
+  padding: 1rem 0;
+  width: 100%;
+}
+
+.datos .datos-colors .colors {
+  height: 100px;
+  overflow-y: scroll;
+  max-width: max-content;
+}
+.datos .datos-colors .colors .color {
+  display: flex;
+  justify-content: start;
+  gap: 3rem;
+  padding-left: 0.5rem;
+}
+
+.datos .datos-colors .add-color {
+  background-color: blue;
+  color: white;
+  padding: 0.2rem;
+  display: block;
+  width: max-content;
+  border-radius: 0.2rem;
+  margin: 0.5rem 0 1rem 0.5rem;
+  text-decoration: none;
+}
+
+/* ----------- */
+.view {
+  display: flex;
+  flex-direction: column;
+}
+
+.view .texto-gradiente {
+  background-color: var(--crema);
+  padding: 0.5rem;
+}
+
+.view .texto-gradiente div {
+  background-color: rgb(243, 242, 242);
+  padding: 0.5rem;
+}
+
+.view .texto-gradiente div h2 {
+  background-image: linear-gradient(360deg, rgb(255, 0, 0), rgb(38, 0, 255));
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.view .code {
+  background-color: var(--black);
+  padding: 0.5rem 1rem;
+}
+
+.view .code .code-css {
+  padding: 0.4rem;
+}
+
+.view .code .code-css code {
+  color: white;
+  word-wrap: break-word;
+}
+
+.view .code .code-css code .selector .name-selector {
+  color: aqua;
+  font-weight: 700;
+}
+.view .code .code-css code .selector .bracket {
+  color: orange;
+  font-weight: 700;
+}
+
+.view .code .code-css code .properties {
+  color: white;
+  padding-left: 2rem;
+}
+
+.view .code .code-css code .properties .key {
+  color: darksalmon;
+  font-weight: 700;
+}
+
+.view .code .code-css code .properties .value {
+  color: chartreuse;
+  font-weight: 400;
+}
